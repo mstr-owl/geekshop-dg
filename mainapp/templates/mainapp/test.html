@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title|title }}</title>
+</head>
+<body>
+<h1>{{ header }}</h1>
+<p>{{ user }}</p>
+
+
+{% if promotion %}
+    {% for product in products_promotion %}
+        <div style="color: red">{{ product.name }} {{ product.price }}руб.</div>
+        <br>
+    {% endfor %}
+{% else %}
+    {% for product in products %}
+        <div style="color: green ">{{ product.name }} {{ product.price }}руб.</div>
+        <br>
+{% endfor %}
+{% endif %}
+
+</body>
+</html>
+
+
+    # path('test/', test, name='test')
+
+    # def test(request):
+#     context = { 'title':'geekshop',
+#                 'header':'Welcome',
+#                 'user':'David',
+#                 'products': [
+#                     {'name': 'куртка хуго','price': 13500},
+#                     {'name': 'куртка хуго', 'price': 13500},
+#                     {'name': 'куртка хуго', 'price': 13500},
+#                     {'name': 'куртка хуго', 'price': 13500},
+#                     {'name': 'куртка хуго', 'price': 13500},
+#                     {'name': 'куртка хуго', 'price': 13500}
+#                 ],
+#                 'prometion':True,
+#
+#                 'products_promotion': [
+#                     {'name': 'куртка хуго', 'price': 8500},
+#                     {'name': 'куртка хуго', 'price': 8500},
+#                     {'name': 'куртка хуго', 'price': 8500},
+#                     {'name': 'куртка хуго', 'price': 8500},
+#                     {'name': 'куртка хуго', 'price': 8500},
+#                     {'name': 'куртка хуго', 'price': 8500}
+#                 ],
+#                 }
+#
+#     return render(request, 'mainapp/test.html', context)
