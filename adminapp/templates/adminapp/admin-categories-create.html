@@ -20,8 +20,7 @@
             </div>
         {% endif %}
         <h1 class="mt-4">Добавить категорию</h1>
-        <form action="{% url 'adminapp:admin_category_add' %}" method="POST"
-        ">
+        <form action="{% url 'adminapp:admin_category_add' %}" method="POST">
         {% csrf_token %}
         <div class="form-row">
             <div class="col-lg-7">
