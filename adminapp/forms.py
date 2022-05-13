@@ -26,8 +26,6 @@ class UserAdminRegisterForm(UserCreationForm):
             field.widget.attrs['class'] = 'form-control py-4'
         self.fields['image'].widget.attrs['class'] = 'custom-file-input'
 
-
-
 class UserAdminProfileForm(UserChangeForm):
 
     class Meta:
